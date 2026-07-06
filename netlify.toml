@@ -1,11 +1,46 @@
-[[redirects]]
-  from = "/"
-  to = "/Pagina_inicial.html"
-  status = 200
-  force = true
+# =========================================================
+#  NETLIFY – Configuracao de deploy e rotas
+#  Todas as regras de roteamento ficam AQUI (nao usar _redirects).
+# =========================================================
 
+# Publica tudo que esta na raiz do repositorio.
+[build]
+  publish = "."
+
+# ---------------------------------------------------------
+#  REDIRECTS / REWRITES
+#  Ordem importa: o Netlify aplica a PRIMEIRA regra que bate.
+#  force = true  →  aplica mesmo que exista um arquivo no caminho.
+# ---------------------------------------------------------
+
+# 1. Raiz → pagina de selecao de squad
 [[redirects]]
-  from = "/links"
-  to = "/index.html"
+  from   = "/"
+  to     = "/Pagina_inicial.html"
   status = 200
-  force = true
+  force  = true
+
+# 2. /links → painel da squad (index.html)
+[[redirects]]
+  from   = "/links"
+  to     = "/index.html"
+  status = 200
+  force  = true
+
+# 3. Catch-all: qualquer rota que nao bata em arquivo real → 404
+#    force = false (padrao) para que arquivos estaticos
+#    (img/, config.js, favicon, etc.) continuem sendo servidos normalmente.
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+# ---------------------------------------------------------
+#  HEADERS (seguranca basica e cache)
+# ---------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options  = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy  = "strict-origin-when-cross-origin"
