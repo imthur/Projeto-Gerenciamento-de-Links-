@@ -3,3 +3,9 @@
   to = "/Pagina_inicial.html"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/links"
+  to = "/index.html"
+  status = 200
+  force = true
