@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/"
+  to = "/Pagina_inicial.html"
+  status = 200
+  force = true
