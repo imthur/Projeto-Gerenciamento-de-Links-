@@ -5,7 +5,7 @@
 ========================================================= */
 
 const SUPABASE_URL = "https://gfabaucpogatrqqvvuqt.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmYWJhdWNwb2dhdHJxcXZ2dXF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAzMTI0NzYsImV4cCI6MjA5NTg4ODQ3Nn0.dxWbk7ggQZdkAQbzYuODyWWibJPcIwKf2XTtU_bVkdk";
+const SUPABASE_ANON_KEY = "sb_publishable_IR8qlDQ_5LrIPtO8DSgpSw_H7DoAUhP";
 
 // Dominio interno usado nos logins das squads (o colaborador nunca ve isto).
 const EMAIL_DOMAIN = "squad.local";
