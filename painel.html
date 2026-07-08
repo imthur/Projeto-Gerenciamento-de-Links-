@@ -823,6 +823,11 @@ header{
         transition:none !important;
         scroll-behavior:auto !important;
     }
+    /* Os cards saem de opacity:0 apenas pela animacao cardEntra. Com o
+       movimento reduzido a animacao e desligada, entao forcamos o estado
+       final visivel (senao os cards ficam invisiveis). Mesmo tratamento
+       que o .squad-card ja recebe na pagina de login. */
+    .card{ opacity:1 !important; transform:none !important; }
 }
 
 </style>
