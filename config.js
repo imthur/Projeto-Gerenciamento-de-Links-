@@ -11,7 +11,7 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const EMAIL_DOMAIN = "squad.local";
 
 // As categorias (cards) de cada squad agora vivem na tabela "categorias" do
-// Supabase, gerenciadas pela propria squad dentro do sistema. Ver index.html.
+// Supabase, gerenciadas pela propria squad dentro do sistema. Ver painel.html.
 
 // Helpers usados pelas duas paginas.
 function emailDaSquad(squadKey) {

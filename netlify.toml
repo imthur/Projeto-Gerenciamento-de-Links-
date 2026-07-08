@@ -13,21 +13,16 @@
 #  force = true  →  aplica mesmo que exista um arquivo no caminho.
 # ---------------------------------------------------------
 
-# 1. Raiz → pagina de selecao de squad
-[[redirects]]
-  from   = "/"
-  to     = "/Pagina_inicial.html"
-  status = 200
-  force  = true
-
-# 2. /links → painel da squad (index.html)
+# 1. /links → painel da squad (painel.html)
+#    A raiz "/" nao precisa de regra: o Netlify serve index.html
+#    (a tela de selecao de squad/login) por padrao.
 [[redirects]]
   from   = "/links"
-  to     = "/index.html"
+  to     = "/painel.html"
   status = 200
   force  = true
 
-# 3. Catch-all: qualquer rota que nao bata em arquivo real → 404
+# 2. Catch-all: qualquer rota que nao bata em arquivo real → 404
 #    force = false (padrao) para que arquivos estaticos
 #    (img/, config.js, favicon, etc.) continuem sendo servidos normalmente.
 [[redirects]]
